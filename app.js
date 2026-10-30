@@ -12,7 +12,7 @@ const msg = document.querySelector("#msg");
 const btn = document.querySelector("#convertBtn");
 const swapBtn = document.querySelector("#swap");
 
-// Add all currency options to both dropdowns.
+
 for (const select of dropdowns) {
   for (const currCode of Object.keys(countryList)) {
     const option = document.createElement("option");
@@ -35,7 +35,7 @@ for (const select of dropdowns) {
   });
 }
 
-// Update the flag corresponding to the selected currency.
+
 function updateFlag(selectElement) {
   const countryCode = countryList[selectElement.value];
   const flagURL = `https://flagsapi.com/${countryCode}/flat/64.png`;
@@ -49,7 +49,7 @@ function updateFlag(selectElement) {
   }
 }
 
-// Get the latest available rate and convert the amount.
+
 async function updateExchangeRate() {
   const amountText = amountInput.value.trim();
   const amount = Number(amountText);
@@ -100,13 +100,13 @@ async function updateExchangeRate() {
   }
 }
 
-// Submit button.
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   updateExchangeRate();
 });
 
-// Swap the selected currencies.
+
 function swapCurrencies() {
   const previousFrom = fromCurr.value;
   fromCurr.value = toCurr.value;
@@ -125,7 +125,7 @@ swapBtn.addEventListener("keydown", (event) => {
   }
 });
 
-// Set the initial flags and perform the first conversion.
+
 updateFlag(fromCurr);
 updateFlag(toCurr);
 updateExchangeRate();
