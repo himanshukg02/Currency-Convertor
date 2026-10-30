@@ -1,4 +1,4 @@
-// Currency codes and country codes used to display flags.
+
 const countryList = {
   AED: "AE", AFN: "AF", ALL: "AL", AMD: "AM", AOA: "AO",
   ARS: "AR", AUD: "AU", AZN: "AZ", BAM: "BA", BDT: "BD",
